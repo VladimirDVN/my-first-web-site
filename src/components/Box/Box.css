@@ -1,0 +1,9 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--box-size);
+  width: var(--box-size);
+  border: 3px solid black;
+  border-radius: 15px;
+}

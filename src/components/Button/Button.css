@@ -1,0 +1,10 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--button-size);
+  width: var(--box-size);
+  background-color: lightsalmon;
+  border: 3px solid black;
+  border-radius: 15px;
+}
