@@ -8,6 +8,7 @@ class Button extends React.Component {
   }
 
   handleClick() {
+    this.props.updateColor();
     this.setState({ isOn: !this.state.isOn });
   }
 

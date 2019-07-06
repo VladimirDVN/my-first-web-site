@@ -6,4 +6,10 @@
   width: var(--box-size);
   border: 3px solid black;
   border-radius: 15px;
+
+  transition: ease 1s;
+}
+
+.box:hover {
+  transform: scale(2, 2) skewX(30deg) rotate(-180deg);
 }

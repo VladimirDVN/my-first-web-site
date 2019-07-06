@@ -2,22 +2,17 @@ import React from "react";
 import "./Box.css";
 
 class Box extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      color: this.getRandomColor()
-    };
-  }
-
-  getRandomColor() {
-    return (
-      "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6)
-    );
-  }
-
   render() {
+    let styles = {
+      background: this.props.color,
+      WebkitBoxShadow: "0px 0px 100px 25px " + this.props.color,
+      MozBoxShadow: "0px 0px 100px 25px " + this.props.color,
+      boxShadow: "0px 0px 100px 25px " + this.props.color,
+      boxShadowOpacity: 0.5
+    };
+
     return (
-      <div className="box" style={{ background: this.state.color }}>
+      <div className="box" style={styles}>
         Я коробка
       </div>
     );
