@@ -7,7 +7,7 @@
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
-.app {
+.game {
   display: flex;
   /* flex-direction: column;  */
   justify-content: space-evenly;
