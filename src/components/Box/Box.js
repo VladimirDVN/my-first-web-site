@@ -1,9 +1,9 @@
 import React from "react";
-import "./Box.css";
+import styles from "./box.module.css";
 
 class Box extends React.Component {
   render() {
-    let styles = {
+    let generatedStyles = {
       background: this.props.color,
       WebkitBoxShadow: "0px 0px 100px 25px " + this.props.color,
       MozBoxShadow: "0px 0px 100px 25px " + this.props.color,
@@ -12,7 +12,7 @@ class Box extends React.Component {
     };
 
     return (
-      <div className="box" style={styles}>
+      <div className={styles["box"]} style={generatedStyles}>
         Я коробка
       </div>
     );

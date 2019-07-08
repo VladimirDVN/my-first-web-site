@@ -1,5 +1,5 @@
 import React from "react";
-import "./Button.css";
+import styles from "./button.module.css";
 
 class Button extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class Button extends React.Component {
 
   render() {
     return (
-      <div className="button" onClick={this.handleClick.bind(this)}>
+      <div className={styles["button"]} onClick={this.handleClick.bind(this)}>
         Я кнопка: {this.state.isOn ? "ВКЛ" : "ВЫКЛ"}!
       </div>
     );

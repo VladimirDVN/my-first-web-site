@@ -1,7 +1,7 @@
 import React from "react";
-import "./App.css";
+import styles from "./app.module.css";
 
-import Box from "./components/Box/Box";
+import { Box } from "./components/Box";
 import Button from "./components/Button/Button";
 
 class App extends React.Component {
@@ -24,7 +24,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app noselect">
+      <div className={styles["app"]}>
         <Box color={this.state.color} />
         <Button updateColor={this.updateColor.bind(this)} />
       </div>
