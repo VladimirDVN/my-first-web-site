@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./game.module.css";
 
+import Header from "components/Header/Header";
 import Box from "components/Box/Box";
 import Button from "components/Button/Button";
 
@@ -25,12 +26,18 @@ class Game extends React.Component {
 
   render() {
     return (
-      <div className={styles["game"]}>
-        <Box color={this.state.color} />
-        <Button updateColor={this.updateColor.bind(this)} />
-        <Link className={styles["link"]} to="/home">
-          Домой
-        </Link>
+      <div>
+        <Header />
+        <div className={styles["game"]}>
+          <div className={styles["row"]}>
+            <Box color={this.state.color} />
+            <Button updateColor={this.updateColor.bind(this)} />
+          </div>
+
+          <Link className={styles["link"]} to="/home">
+            Домой
+          </Link>
+        </div>
       </div>
     );
   }

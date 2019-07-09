@@ -9,7 +9,7 @@
 
 .game {
   display: flex;
-  /* flex-direction: column;  */
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   background-color: lightskyblue;
@@ -17,4 +17,14 @@
   width: 100vw;
 
   composes: noselect;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+}
+
+.link {
 }
