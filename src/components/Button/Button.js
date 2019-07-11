@@ -1,5 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 import styles from "./button.module.css";
+
+import { getRandomColor } from "utils";
+import { CHANGE_COLOR } from "store/actionTypes";
 
 class Button extends React.Component {
   constructor(props) {
@@ -8,7 +12,8 @@ class Button extends React.Component {
   }
 
   handleClick() {
-    this.props.updateColor();
+    this.props.handleClickRedux();
+    // this.props.updateColor();
     this.setState({ isOn: !this.state.isOn });
   }
 
@@ -21,4 +26,25 @@ class Button extends React.Component {
   }
 }
 
-export default Button;
+const mapDispatchToProps = function(dispatch) {
+  return {
+    handleClickRedux: function() {
+      dispatch({
+        type: CHANGE_COLOR,
+        color: getRandomColor()
+      });
+    }
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Button);
+
+console.log(
+  connect(
+    null,
+    mapDispatchToProps
+  )
+);

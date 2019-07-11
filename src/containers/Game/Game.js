@@ -26,7 +26,7 @@ class Game extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles["main"]}>
         <Header />
         <div className={styles["game"]}>
           <div className={styles["row"]}>
@@ -34,9 +34,7 @@ class Game extends React.Component {
             <Button updateColor={this.updateColor.bind(this)} />
           </div>
 
-          <Link className={styles["link"]} to="/home">
-            Домой
-          </Link>
+          <Link to="/home">Домой</Link>
         </div>
       </div>
     );
