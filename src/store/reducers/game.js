@@ -1,6 +1,4 @@
 import { CHANGE_COLOR } from "store/actionTypes";
-// import * as actions from "store/actionTypes";
-// actions.CHANGE_COLOR
 
 const initialState = {
   color: "#ffffff"
