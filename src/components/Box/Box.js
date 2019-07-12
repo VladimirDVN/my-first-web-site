@@ -1,14 +1,38 @@
 import React from "react";
+import { connect } from "react-redux";
 import styles from "./box.module.css";
+
+import { hexToRgb } from "utils";
 
 class Box extends React.Component {
   render() {
-    let generatedStyles = {
-      background: this.props.color,
-      WebkitBoxShadow: "0px 0px 100px 25px " + this.props.color,
-      MozBoxShadow: "0px 0px 100px 25px " + this.props.color,
-      boxShadow: "0px 0px 100px 25px " + this.props.color,
-      boxShadowOpacity: 0.5
+    var color = hexToRgb(this.props.color);
+    var generatedStyles = {
+      background: "rgb(" + color.r + ", " + color.g + ", " + color.b + ")",
+      WebkitBoxShadow:
+        "0px 0px 100px 25px rgba(" +
+        color.r +
+        ", " +
+        color.g +
+        ", " +
+        color.b +
+        ", 0.5)",
+      MozBoxShadow:
+        "0px 0px 100px 25px rgba(" +
+        color.r +
+        ", " +
+        color.g +
+        ", " +
+        color.b +
+        ", 0.5)",
+      boxShadow:
+        "0px 0px 100px 25px rgba(" +
+        color.r +
+        ", " +
+        color.g +
+        ", " +
+        color.b +
+        ", 0.5)"
     };
 
     return (
@@ -19,4 +43,11 @@ class Box extends React.Component {
   }
 }
 
-export default Box;
+const mapStateToProps = function(state) {
+  return { color: state.gameReducer.color };
+};
+
+export default connect(
+  mapStateToProps,
+  null
+)(Box);

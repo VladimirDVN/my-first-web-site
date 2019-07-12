@@ -10,7 +10,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_COLOR:
       state.color = action.color;
-      return state;
+      return Object.assign({}, state);
     default:
       return state;
   }

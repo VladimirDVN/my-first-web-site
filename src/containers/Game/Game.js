@@ -6,23 +6,19 @@ import Header from "components/Header/Header";
 import Box from "components/Box/Box";
 import Button from "components/Button/Button";
 
+// import { getRandomColor } from "utils";
+
 class Game extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      color: "#ffffff"
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     color: "#ffffff"
+  //   };
+  // }
 
-  getRandomColor() {
-    return (
-      "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6)
-    );
-  }
-
-  updateColor() {
-    this.setState({ color: this.getRandomColor() });
-  }
+  // updateColor() {
+  //   this.setState({ color: getRandomColor() });
+  // }
 
   render() {
     return (
@@ -30,8 +26,10 @@ class Game extends React.Component {
         <Header />
         <div className={styles["game"]}>
           <div className={styles["row"]}>
-            <Box color={this.state.color} />
-            <Button updateColor={this.updateColor.bind(this)} />
+            {/* <Box color={this.state.color} />
+            <Button updateColor={this.updateColor.bind(this)} /> */}
+            <Box />
+            <Button />
           </div>
 
           <Link to="/home">Домой</Link>
