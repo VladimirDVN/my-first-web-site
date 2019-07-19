@@ -1,0 +1,54 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--button-size);
+  width: var(--box-size);
+  color: white;
+  background-color: #4caf50;
+  /* border: 3px solid white; */
+  border-radius: 15px;
+  box-shadow: 0px 9px #999;
+
+  cursor: pointer;
+
+  animation: pulse 2s infinite;
+}
+
+.button:hover {
+  background-color: #377e3e;
+  animation: none;
+}
+
+.button:active {
+  background-color: #4caf50;
+  box-shadow: 0px 5px #666;
+  transform: translateY(4px);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #4caf50;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px #4caf50;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 #4caf50;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 #4caf50;
+    box-shadow: 0 0 0 0 #4caf50;
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px #4caf50;
+    box-shadow: 0 0 0 10px #4caf50;
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 #4caf50;
+    box-shadow: 0 0 0 0 #4caf50;
+  }
+}

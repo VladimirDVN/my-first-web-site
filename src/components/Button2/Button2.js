@@ -1,11 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import styles from "./button.module.css";
+import styles from "./button2.module.css";
 
-import { getRandomColor } from "utils";
-import { CHANGE_COLOR } from "store/actionTypes";
+import { PREV_COLOR } from "store/actionTypes";
 
-class Button extends React.Component {
+class Button2 extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isOn: false };
@@ -19,7 +18,7 @@ class Button extends React.Component {
   render() {
     return (
       <div className={styles["button"]} onClick={this.handleClick.bind(this)}>
-        Следующий цвет: {this.state.isOn ? "ВКЛ" : "ВЫКЛ"}!
+        Предыдущий цвет: {this.state.isOn ? "ВКЛ" : "ВЫКЛ"}!
       </div>
     );
   }
@@ -29,9 +28,7 @@ const mapDispatchToProps = function(dispatch) {
   return {
     handleClickRedux: function() {
       dispatch({
-        type: CHANGE_COLOR,
-        color: getRandomColor(),
-        permit: true
+        type: PREV_COLOR
       });
     }
   };
@@ -40,4 +37,4 @@ const mapDispatchToProps = function(dispatch) {
 export default connect(
   null,
   mapDispatchToProps
-)(Button);
+)(Button2);
