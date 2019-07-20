@@ -1,0 +1,8 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-buttons {
+  display: flex;
+}

@@ -9,7 +9,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className={styles["main"]}>
-        <Header />
+        <Header windowName="Главная" />
         <div className={styles["home"]}>
           <p>Привет, ты на нашем сайте! Давай погуляем по сайту!</p>
 

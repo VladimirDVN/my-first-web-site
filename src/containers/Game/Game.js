@@ -13,7 +13,7 @@ class Game extends React.Component {
   render() {
     return (
       <div className={styles["main"]}>
-        <Header />
+        <Header windowName="Игра" />
         <div className={styles["game"]}>
           <Box />
           <div className={styles["row"]}>
@@ -34,4 +34,3 @@ export default connect(
   mapStateToProps,
   null
 )(Game);
-// export default Game;

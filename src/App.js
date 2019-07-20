@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import Home from "containers/Home/Home";
 import Game from "containers/Game/Game";
+import Auth from "containers/Auth/Auth";
 
 class App extends React.PureComponent {
   render() {
@@ -11,6 +12,7 @@ class App extends React.PureComponent {
         <Route exact path="/" component={Home} />
         <Route path="/home" component={Home} />
         <Route path="/game" component={Game} />
+        <Route path="/login" component={Auth} />
       </BrowserRouter>
     );
   }
