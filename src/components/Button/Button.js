@@ -11,7 +11,8 @@ class Button extends React.Component {
     this.state = { isOn: false };
   }
 
-  handleClick() {
+  handleClick(event) {
+    event.preventDefault();
     this.props.handleClickRedux();
     this.setState({ isOn: !this.state.isOn });
   }

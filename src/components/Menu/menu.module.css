@@ -1,0 +1,20 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+
+  background-color: var(--color-menu);
+}
+
+.button {
+  text-decoration: none;
+  color: var(--color-header);
+
+  padding: 10px;
+  background: transparent;
+}
+
+.button:hover {
+  background: rgba(0, 0, 0, 0.15);
+}

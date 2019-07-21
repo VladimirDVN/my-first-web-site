@@ -1,8 +1,5 @@
 .toolbar {
   display: flex;
   justify-content: space-between;
-}
-
-.navigation-buttons {
-  display: flex;
+  background-color: var(--color-header);
 }

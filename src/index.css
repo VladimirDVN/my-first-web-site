@@ -15,4 +15,8 @@ code {
 :root {
   --box-size: 130px;
   --button-size: 40px;
+
+  --color-main-background: lightblue;
+  --color-header: darkblue;
+  --color-menu: skyblue;
 }

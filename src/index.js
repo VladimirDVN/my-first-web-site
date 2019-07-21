@@ -6,10 +6,12 @@ import "./index.css";
 
 import App from "./App";
 import gameReducer from "store/reducers/game";
+import menuReducer from "store/reducers/menu";
 // import * as serviceWorker from './serviceWorker';
 
 const rootReducer = combineReducers({
-  gameReducer
+  gameReducer,
+  menuReducer
 });
 
 const store = createStore(

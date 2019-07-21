@@ -7,10 +7,15 @@
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
-.main {
+.window {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+.context {
+  display: flex;
+  height: 100%;
 }
 
 .game {
@@ -18,7 +23,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: lightskyblue;
+  background-color: var(--color-main-background);
   flex-grow: 1;
 
   composes: noselect;
@@ -29,5 +34,5 @@
   justify-content: space-evenly;
   align-items: center;
 
-  width: 100vw;
+  width: 100%;
 }

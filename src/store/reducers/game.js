@@ -26,6 +26,8 @@ const reducer = (state = initialState, action) => {
         state.permit = false;
       }
       state.color = state.color_ar[state.color_cur];
+      state.color_ar.pop(state.color_cur);
+      state.color_ind--;
       // state.color = state.prev_color;
 
       return Object.assign({}, state);
