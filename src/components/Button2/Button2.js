@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+
 import styles from "./button2.module.css";
 
 import { PREV_COLOR } from "store/actionTypes";
